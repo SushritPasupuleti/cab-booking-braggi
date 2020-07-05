@@ -9,13 +9,16 @@ const UsersSchema = new mongoose.Schema({
         type: String,
     },
     token: {
-        type: String,
+        type: String, //generated post sign in by auth
     },
     cab: {
         cabLocation: {
             type: String
         },
         cabModelName: {
+            type: String
+        },
+        cabType: {
             type: String
         },
         cabColor: {
@@ -25,7 +28,7 @@ const UsersSchema = new mongoose.Schema({
             type: String
         },
         cabSlot: {
-            type: String
+            type: String //{cabTo, cabFrom, cabTime}
         }
     },
     banned: {

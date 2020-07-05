@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser');
@@ -5,6 +6,7 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.json());
 const cors = require('cors');
 const port = 6000
+const routes = require('./routes');
 
 app.use(cors());
 app.use( (req, res, next) => {
@@ -13,6 +15,10 @@ app.use( (req, res, next) => {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
  });
+
+app.use('/addAPI', routes.addAPI);
+app.use('/bookAPI', routes.bookAPI);
+
 app.get('/', (req, res) => res.send({ "response": "Hello World!" }))
 
 app.get('/getCabs', (req, res) => res.send({ "response": "Available Cabs: \n - SUV \n - XL \n - Sedan \n - Micro \n - Nano" }))

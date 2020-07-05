@@ -26,6 +26,9 @@ const UsersSchema = new mongoose.Schema({
         cabModelName: {
             type: String
         },
+        cabType: {
+            type: String
+        },
         cabColor: {
             type: String
         },
