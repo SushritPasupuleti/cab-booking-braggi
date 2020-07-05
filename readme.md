@@ -26,6 +26,9 @@ Server runs on a port Specified in the ```.env``` file navigate to ```localhost:
 │   ├── book
 │   ├── getCabs
 │   ├── tripDone
+│   ├── getTo
+│   ├── getFrom
+
 
 ```
 

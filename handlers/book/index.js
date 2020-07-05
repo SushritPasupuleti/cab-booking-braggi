@@ -45,28 +45,7 @@ exports.book = async (req, res, next) => {
 
 }
 
-exports.getCabs = async (req, res, next) => {
-    try {
-        console.log(req.body)
 
-        const list = await db.User.find({
-            "cab.cabSlot.tripDone": false
-        })
-
-        return res.send({
-            //generate Card with List,
-            "prompts": list,
-            "entities": [{
-                "CAB_TYPE": list
-            }]
-        });
-    }
-
-    catch (err) {
-        console.log("Error")
-        return res.status(400).json(err);
-    }
-}
 
 exports.tripDone = async (req, res, next) => {
 
@@ -104,4 +83,59 @@ exports.tripDone = async (req, res, next) => {
         console.log("Error")
         return res.status(400).json(err);
     }
+}
+
+exports.getCabs = async (req, res, next) => {
+    try {
+        console.log(req.body)
+
+        const list = await db.User.find({
+            "cab.cabSlot.tripDone": false
+        })
+
+        return res.send({
+            //generate Card with List,
+            "prompts": list,
+            "entities": [{
+                "CAB_TYPE": list
+            }]
+        });
+    }
+
+    catch (err) {
+        console.log("Error")
+        return res.status(400).json(err);
+    }
+}
+
+exports.getTo = async (req, res, next) => {
+    const list = ["Gotham", "Metropolis", "Shadow Realm", "Nether", "Tatooine", "Alderan"]///Would normally use some API Ex: Maps
+    console.log(req.body)
+    response = "Booked a " + req.body.slots.CAB_TYPE + ", with " + req.body.slots.SEATCOUNT + " seat(s). Your cab will arrive " + req.body.slots.CAB_BOOK_TIME
+    console.log("Response: " + response)
+    res.send(
+        {
+            "responses": "Where would you like to go ? (Web)",
+            "entities": [{
+                "DEST_TO": list
+            }],
+            "prompts": list
+        }
+    )
+}
+
+exports.getFrom = async (req, res, next) => {
+    const list = ["Place1", "Place2", "Place3", "Place4", "Place5"]///Would normally use some API Ex: Maps
+    console.log(req.body)
+    response = "Booked a " + req.body.slots.CAB_TYPE + ", with " + req.body.slots.SEATCOUNT + " seat(s). Your cab will arrive " + req.body.slots.CAB_BOOK_TIME
+    console.log("Response: " + response)
+    res.send(
+        {
+            "responses": "Where would you like to go ? (Web)",
+            "entities": [{
+                "DEST_FROM": list
+            }],
+            "prompts": list
+        }
+    )
 }
