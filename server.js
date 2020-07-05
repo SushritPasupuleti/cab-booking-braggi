@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 //var server = require('http').Server(app);
 app.use(bodyParser.json());
 const cors = require('cors');
-const port = 6000
+const port = process.env.PORT
 const routes = require('./routes');
 
 app.use(cors());
