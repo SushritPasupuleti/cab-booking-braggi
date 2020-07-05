@@ -1,6 +1,9 @@
-# Cab Booking Service (Backend)
+# Simple Cab Booking Service (Backend)
 
 ### Setup
+
+**Requires MongoDB**
+
 ```shell
 npm install
 ```
@@ -11,7 +14,8 @@ Run Server
 node server.js
 ```
 
-Server runs on a port Specified in the ```.env``` file
+
+Server runs on a port Specified in the ```.env``` file navigate to ```localhost:PORT``` in the browser
 
 ## Routes (all POST)
 ```
