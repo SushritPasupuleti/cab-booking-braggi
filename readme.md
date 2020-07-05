@@ -24,10 +24,10 @@ Server runs on a port Specified in the ```.env``` file navigate to ```localhost:
 │   ├── add-cab
 ├── book-api/
 │   ├── book
-│   ├── get-cabs
+│   ├── cabs-list
 │   ├── trip-done
-│   ├── get-to
-│   ├── get-from
+│   ├── dest-to
+│   ├── dest-from
 
 
 ```

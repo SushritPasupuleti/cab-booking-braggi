@@ -23,7 +23,7 @@ app.get('/', (req, res) => res.send({ "response": "Hello World!" }))
 
 //// <<<<<------ IGNORE CODE BELOW --------->>>> ////
 
-app.get('/get-cabs', (req, res) => res.send({ "response": "Available Cabs: \n - SUV \n - XL \n - Sedan \n - Micro \n - Nano" }))
+app.get('/cabs-list', (req, res) => res.send({ "response": "Available Cabs: \n - SUV \n - XL \n - Sedan \n - Micro \n - Nano" }))
 
 app.post('/book', (req, res) => {
     console.log(req.body)
@@ -37,7 +37,7 @@ app.post('/book', (req, res) => {
     )
 })
 
-app.post('/get-to', (req, res) => {
+app.post('/dest-to', (req, res) => {
     console.log(req.body)
     response = "Booked a " + req.body.slots.CAB_TYPE + ", with " + req.body.slots.SEATCOUNT + " seat(s). Your cab will arrive " + req.body.slots.CAB_BOOK_TIME
     console.log("Response: " + response)
@@ -52,7 +52,7 @@ app.post('/get-to', (req, res) => {
     )
 })
 
-app.post('/get-from', (req, res) => {
+app.post('/dest-from', (req, res) => {
     console.log(req.body)
     response = "Booked a " + req.body.slots.CAB_TYPE + ", with " + req.body.slots.SEATCOUNT + " seat(s). Your cab will arrive " + req.body.slots.CAB_BOOK_TIME
     console.log("Response: " + response)
