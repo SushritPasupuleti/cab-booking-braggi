@@ -13,7 +13,7 @@ exports.book = async (req, res, next) => {
                     "cabFrom": req.body.slot.DEST_FROM,
                     "cabBookie": req.body.slot.EMAIL,
                     "cabTime": req.body.slot.CAB_BOOK_TIME,
-                    "tripDone": false
+                    "trip-done": false
                 }
             })
 
@@ -26,7 +26,7 @@ exports.book = async (req, res, next) => {
                     "cabFrom": req.body.slot.DEST_FROM,
                     "cabBookie": req.body.slot.EMAIL,
                     "cabTime": req.body.slot.CAB_BOOK_TIME,
-                    "tripDone": false
+                    "trip-done": false
                 }
             })
 
@@ -61,7 +61,7 @@ exports.tripDone = async (req, res, next) => {
                     "cabFrom": req.body.slot.DEST_FROM,
                     "cabBookie": req.body.slot.EMAIL,
                     "cabTime": req.body.slot.CAB_BOOK_TIME,
-                    "tripDone": true
+                    "trip-done": true
                 }
             })
 
@@ -74,7 +74,7 @@ exports.tripDone = async (req, res, next) => {
                     "cabFrom": "",
                     "cabBookie": "",
                     "cabTime": "",
-                    "tripDone": true
+                    "trip-done": true
                 }
             })
     }

@@ -19,15 +19,15 @@ Server runs on a port Specified in the ```.env``` file navigate to ```localhost:
 
 ## Routes (all POST)
 ```
-├── addAPI/
-│   ├── addUser
-│   ├── addCab
-├── bookAPI/
+├── add-api/
+│   ├── add-user
+│   ├── add-cab
+├── book-api/
 │   ├── book
-│   ├── getCabs
-│   ├── tripDone
-│   ├── getTo
-│   ├── getFrom
+│   ├── get-cabs
+│   ├── trip-done
+│   ├── get-to
+│   ├── get-from
 
 
 ```
