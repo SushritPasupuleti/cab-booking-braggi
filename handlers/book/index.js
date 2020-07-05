@@ -55,7 +55,10 @@ exports.getCabs = async (req, res, next) => {
 
         return res.send({
             //generate Card with List,
-            "prompts": list
+            "prompts": list,
+            "entities": [{
+                "CAB_TYPE": list
+            }]
         });
     }
 
