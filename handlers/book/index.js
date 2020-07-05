@@ -5,7 +5,7 @@ exports.book = async (req, res, next) => {
 
     try {
         const user = await db.User.updateOne({
-            "cab.cabNo": req.body.slot.cabNo,
+            "email": req.body.slot.EMAIL,
         },
             {
                 "cab.cabSlot": {

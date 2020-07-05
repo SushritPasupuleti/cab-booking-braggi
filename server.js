@@ -16,6 +16,7 @@ app.use( (req, res, next) => {
     next();
  });
 
+app.use('/auth', routes.auth);
 app.use('/add-api', routes.addAPI);
 app.use('/book-api', routes.bookAPI);
 

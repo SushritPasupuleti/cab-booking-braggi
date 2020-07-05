@@ -1,6 +1,7 @@
 module.exports = {
     ...require('./add/index'),
-    ...require('./book/index')
+    ...require('./book/index'),
+    ...require('./auth/index')
   };
 
 module.exports.error = (err, req, res, next) => {
