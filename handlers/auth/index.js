@@ -3,7 +3,7 @@ const db = require('../../models');
 exports.generateOTP = async (req, res, next) => {
     console.log(req.body)
 
-    let otp = Math.floor(100000 + Math.random() * 900000); //User a reliable 3rd party service
+    let otp = Math.floor(100000 + Math.random() * 900000); //Use a reliable 3rd party service
     let expiry = new Date(); expiry.setMinutes(expiry.getMinutes() + 2);
     console.log("Generated OTP: ", otp, " valid till: ", expiry)
 
